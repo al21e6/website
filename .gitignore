@@ -1,0 +1,9 @@
+*.DS_Store
+**/__pycache__/
+.env
+gandi.yml
+instance
+venv
+app/static/img/logo.png
+app/static/img/favicon.ico
+app/templates/about.html

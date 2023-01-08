@@ -1,0 +1,132 @@
+:root {
+  --color--accent: white;
+  --color--accent-light: #ebecf0;
+  --color--tint: #33C3F0;
+  --color--tint-light: #1FEEE6;
+  --color--highlight: transparent;
+  --color--highlight-light: transparent;
+  --color--success: #69b29c;
+  --color--success: rgb(50, 215, 75);
+  --color--warning: orange;
+  --color--error: #df6858;
+  --color--destructive: #f7403a;
+}
+
+/*.hideable {*/
+#hide-me {
+    -moz-animation: cssAnimation 0s ease-in 5s forwards;
+    -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+    -o-animation: cssAnimation 0s ease-in 5s forwards;
+    animation: cssAnimation 0s ease-in 5s forwards;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes cssAnimation {
+    to {
+        width: 0;
+        height: 0;
+        display: none;
+        overflow: hidden;
+    }
+}
+
+@-webkit-keyframes cssAnimation {
+    to {
+        width: 0;
+        height: 0;
+        display: none;
+        visibility: hidden;
+    }
+}
+
+html {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background: linear-gradient(to top, #0F2027, #0F2027, #4d4d4e);
+  /*background: linear-gradient(to top, #daa0, #e9a784, #b5edff);*/
+}
+
+.flashes {
+  padding: 1vh;
+  color: var(--color--accent);
+}
+
+.success {
+  background: var(--color--success);
+}
+
+body {
+  color: var(--color--accent);
+}
+
+/* select */
+
+select {
+  color: var(--color--accent);
+  background-color: transparent;
+  border-color: var(--color--accent);
+}
+
+select:focus {
+  border: 1px solid var(--color--accent);
+  outline: 0;
+}
+
+
+input[type="text"], input[type="number"], textarea {
+  color: var(--color--accent);
+  background-color: transparent;
+  border-color: var(--color--accent);
+}
+
+input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
+  border-color: var(--color--accent);
+}
+
+.color--warning {
+  color: var(--color--warning);
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 21%;
+}
+
+.logo {
+  height: 14em;
+  width: 14em;
+}
+
+.button-primary-filled {
+  color: black;
+  background-color: white;
+  border-color: black;
+  cursor: default;
+}
+
+.button-primary-hollow {
+  background: none;
+  color: white;
+  border-color: white
+}
+
+.button-primary-hollow:hover {
+  background: none;
+  color: white;
+  border-color: white
+}
+
+
+.social-media {
+  width: 2.5em;
+  height: 2.5em;
+}
