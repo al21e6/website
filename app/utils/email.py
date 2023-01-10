@@ -17,7 +17,7 @@ def _send_async(app, message: Message):
     """
     print(__name__, "_send_async")
     with app.app_context():
-        print(mail, message)
+        print(f"message = {message}")
         mail.send(message)
 
 
