@@ -3,10 +3,7 @@ import sys
 from dotenv import load_dotenv
 from flask import Flask, redirect, url_for
 from flask_mail import Mail
-
-# sys.path.append("../flask_lnbits/flask_lnbits")
 from flask_lnbits import LNbits
-
 from flask_qrcode import QRcode
 from flask_wtf.csrf import CSRFProtect
 from app.config import Config
@@ -25,7 +22,7 @@ def create_app() -> Flask:
 
     csrf.init_app(app=app)
     lnbits.init_app(app=app)
-    mail.init_app(app=app)
+    mail.state = mail.init_app(app=app)
     qr_code.init_app(app=app)
 
     with app.app_context():
