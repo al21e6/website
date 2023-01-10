@@ -1,4 +1,5 @@
 from flask import Blueprint, flash, jsonify, redirect, render_template, request, url_for
+from app import mail
 from app.forms.contact_form import ContactForm
 from app.utils.email import send
 
@@ -19,10 +20,10 @@ def send_message():
     if form.validate_on_submit():
         send(
             sender=form.email.data,
-            recipient="hello@alex-lewis.me",
+            recipient=mail.username,
             subject=form.subject.data,
             html=form.message.data,
         )
-        flash(message="Email successfully sent!", category="success")
+        flash(message="Email sent!", category="success")
         return redirect(url_for("contact_bp.get"))
     return render_template("contact.html", form=form)
